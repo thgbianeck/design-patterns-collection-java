@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: design-patterns-image:latest
+    container_name: design-patterns
+    volumes:
+      - .:/app
+      - maven-repo:/root/.m2  # Adiciona o volume para o repositório Maven
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx1024m
+
+volumes:
+  maven-repo: 

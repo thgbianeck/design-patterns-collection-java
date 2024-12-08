@@ -1,0 +1,75 @@
+{
+    "name": "Curso de Cucumber Java",
+    "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+    "service": "app",
+    "workspaceFolder": "/app",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": true,
+        "configureZshAsDefaultShell": true,
+        "installOhMyZsh": true,
+        "installOhMyZshConfig": true,
+        "upgradePackages": true
+      },
+      "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+        "plugins": "ssh-agent npm",
+        "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+        "username": "root"
+      },
+      "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "vscjava.vscode-java-pack",
+            "PKief.material-icon-theme",
+            "ms-azuretools.vscode-docker",
+            "TabNine.tabnine-vscode",
+            "GitHub.vscode-pull-request-github",
+            "GitHub.remotehub"
+        ],
+        "settings": {
+	        "maven.executable.path": "/usr/bin/mvn",
+          "terminal.integrated.defaultProfile.linux": "zsh",
+          "terminal.integrated.shell.linux": "/bin/zsh",
+          "terminal.integrated.profiles.linux": {
+            "bash": {
+            "path": "bash",
+            "env": {
+              "JAVA_HOME": "/usr/local/openjdk-18"
+            }
+          },
+            "zsh": {
+            "path": "/bin/zsh",
+            "env": {
+              "JAVA_HOME": "/usr/local/openjdk-18"
+            }
+        },
+        "JavaSE-18": {
+          "overrideName": true,
+          "env": {
+            "JAVA_HOME": "/usr/local/openjdk-18"
+          },
+          "path": "bash",
+          "args": [
+            "--rcfile",
+            "/home/bieniek/.vscode-server/data/User/globalStorage/pleiades.java-extension-pack-jdk/.bashrc"
+          ]
+          }},
+          "java.jdt.ls.java.home": "/usr/local/openjdk-18",
+          "java.maven.downloadSources": true,
+          "maven.terminal.useJavaHome": true,
+          "java.configuration.runtimes": [
+            {
+              "name": "JavaSE-18",
+              "path": "/usr/local/openjdk-18",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "remoteUser": "root",
+    "postCreateCommand": "echo 'export JAVA_HOME=/usr/local/openjdk-18' >> ~/.zshrc && /bin/zsh -c 'source ~/.zshrc'"
+  }
+  

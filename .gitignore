@@ -1,0 +1,44 @@
+# Diretórios de build e arquivos temporários
+target/
+*.log
+.history/
+
+# Arquivos de configuração de IDE
+.idea/
+*.iml
+*.classpath
+*.project
+.settings/
+
+# Arquivos temporários e cache
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+*.classpath
+
+# Arquivos do sistema
+*.lock
+*.gz
+*.zip
+
+# Arquivos de dependência do Maven
+*.jar
+*.war
+*.ear
+
+# Arquivos de dependências locais
+.mvn/
+
+# Diretórios de dependências locais
+!src/main/resources/
+!src/main/java/
+!src/main/scala/
+
+# Configurações específicas do Maven
+.mvn/
+.classpath
+.project
+.settings/*
+target/*
+/target/
