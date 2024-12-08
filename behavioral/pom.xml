@@ -12,6 +12,10 @@
       <groupId>br.com.bianeck.cursos.designpatterns</groupId>
       <artifactId>behavioral</artifactId>
       <packaging>pom</packaging>
+      
+      <modules>
+            <module>strategy</module>
+      </modules>
 
 
 </project>
