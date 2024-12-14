@@ -1,0 +1,55 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+interface PayStrategy {
+  +pay(int paymentAmount): boolean
+  +collectPaymentDetails(): void
+}
+
+class Order {
+  -totalCost: int
+  -isClosed: boolean
+  +processOrder(PayStrategy strategy): void
+  +setTotalCost(int cost): void
+  +getTotalCost(): int
+  +isClosed(): boolean
+  +setClosed(): void
+}
+
+class CreditCard {
+  -amount: int
+  -number: String
+  -date: String
+  -cvv: String
+  +CreditCard(String number, String date, String cvv)
+  +setAmount(int amount): void
+  +getAmount(): int
+}
+
+class PayByCreditCard {
+  -READER: BufferedReader
+  -card: CreditCard
+  +collectPaymentDetails(): void
+  +pay(int paymentAmount): boolean
+  -cardIsPresent(): boolean
+}
+
+class PayByPayPal {
+  -DATA_BASE: Map<String, String>
+  -READER: BufferedReader
+  -email: String
+  -password: String
+  -signedIn: boolean
+  +collectPaymentDetails(): void
+  +pay(int paymentAmount): boolean
+  -verify(): boolean
+  -setSignedIn(boolean signedIn): void
+}
+
+PayStrategy <|.. PayByCreditCard
+PayStrategy <|.. PayByPayPal
+Order --> PayStrategy : uses
+PayByCreditCard --> CreditCard : uses
+
+@enduml

@@ -10,15 +10,13 @@
     </parent>
 
     <groupId>br.com.bianeck.cursos.designpatterns.behavioral</groupId>
-    <artifactId>strategy</artifactId>
+    <artifactId>templatemethod</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>refactoringguru</module>
-        <module>rabsicando</module>
-        <module>exercicio1</module>
+        <module>rabiscando</module>
     </modules>
 
-
+    
 
 </project>

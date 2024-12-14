@@ -15,6 +15,7 @@
       
       <modules>
             <module>strategy</module>
+            <module>templatemethod</module>
       </modules>
 
 

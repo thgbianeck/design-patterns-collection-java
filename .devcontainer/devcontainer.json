@@ -26,7 +26,11 @@
             "ms-azuretools.vscode-docker",
             "TabNine.tabnine-vscode",
             "GitHub.vscode-pull-request-github",
-            "GitHub.remotehub"
+            "GitHub.remotehub",
+            "shd101wyy.markdown-preview-enhanced",
+            "yzhang.markdown-all-in-one",
+            "jebbs.plantuml",
+            "CodeDiagram.codediagram"
         ],
         "settings": {
 	        "maven.executable.path": "/usr/bin/mvn",
