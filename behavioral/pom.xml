@@ -16,6 +16,7 @@
       <modules>
             <module>strategy</module>
             <module>templatemethod</module>
+            <module>observer</module>
       </modules>
 
 

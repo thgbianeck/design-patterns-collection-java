@@ -1,4 +1,4 @@
-package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando;
+package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando.before;
 
 /**
  * A classe PagamentoDebito representa uma transação de pagamento com cartão de débito.
@@ -12,9 +12,9 @@ package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscand
  * @version 1.0
  * @since 2023-XX-XX
  */
-public class PagamentoDebito {
+public class PagamentoDebitoBF {
     private float valor;
-    private Gateway gateway;
+    private GatewayBF gateway;
 
     /**
      * Construtor para criar uma nova instância de PagamentoDebito.
@@ -22,7 +22,7 @@ public class PagamentoDebito {
      * @param valor   O valor do pagamento a ser processado.
      * @param gateway O objeto Gateway a ser utilizado para processar a cobrança.
      */
-    public PagamentoDebito(float valor, Gateway gateway) {
+    public PagamentoDebitoBF(float valor, GatewayBF gateway) {
         this.valor = valor;
         this.gateway = gateway;
     }

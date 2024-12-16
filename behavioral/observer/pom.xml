@@ -10,14 +10,12 @@
     </parent>
 
     <groupId>br.com.bianeck.cursos.designpatterns.behavioral</groupId>
-    <artifactId>templatemethod</artifactId>
+    <artifactId>observer</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>rabiscando</module>
         <module>refactoringguru</module>
     </modules>
-
     
-
 </project>

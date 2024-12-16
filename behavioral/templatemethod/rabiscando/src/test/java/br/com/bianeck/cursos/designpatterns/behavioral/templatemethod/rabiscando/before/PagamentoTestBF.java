@@ -1,26 +1,27 @@
-package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando;
+package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando.before;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Testes de Processamento de Pagamentos")
-class PagamentoTest {
+class PagamentoTestBF {
 
-    private Gateway gateway;
+    private GatewayBF gateway;
     private float valor;
 
     @BeforeEach
     void setUp() {
-        gateway = new Gateway();
+        gateway = new GatewayBF();
         valor = 1000f;
     }
 
     @Test
     @DisplayName("Deve processar pagamento com cartão de crédito corretamente")
     void testPagamentoCredito() {
-        PagamentoCredito pagamentoCredito = new PagamentoCredito(valor, gateway);
+        PagamentoCreditoBF pagamentoCredito = new PagamentoCreditoBF(valor, gateway);
         boolean resultado = pagamentoCredito.realizaCobranca();
         
         // Verifica se a cobrança foi realizada (pode ser true ou false devido à natureza aleatória do Gateway)
@@ -35,7 +36,7 @@ class PagamentoTest {
     @Test
     @DisplayName("Deve processar pagamento com cartão de débito corretamente")
     void testPagamentoDebito() {
-        PagamentoDebito pagamentoDebito = new PagamentoDebito(valor, gateway);
+        PagamentoDebitoBF pagamentoDebito = new PagamentoDebitoBF(valor, gateway);
         boolean resultado = pagamentoDebito.realizaCobranca();
         
         assertTrue(resultado || !resultado, "A cobrança deve ser processada pelo gateway");
@@ -48,7 +49,7 @@ class PagamentoTest {
     @Test
     @DisplayName("Deve processar pagamento em dinheiro corretamente")
     void testPagamentoDinheiro() {
-        PagamentoDinheiro pagamentoDinheiro = new PagamentoDinheiro(valor, gateway);
+        PagamentoDinheiroBF pagamentoDinheiro = new PagamentoDinheiroBF(valor, gateway);
         boolean resultado = pagamentoDinheiro.realizaCobranca();
         
         assertTrue(resultado || !resultado, "A cobrança deve ser processada pelo gateway");

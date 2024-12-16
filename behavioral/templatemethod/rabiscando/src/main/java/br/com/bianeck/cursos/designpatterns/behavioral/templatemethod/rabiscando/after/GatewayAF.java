@@ -1,4 +1,4 @@
-package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando;
+package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando.after;
 
 import java.util.Random;
 
@@ -15,7 +15,7 @@ import java.util.Random;
  * @version 1.0
  * @since 2023-XX-XX
  */
-public class Gateway {
+public class GatewayAF {
     
     /**
      * Simula o processamento de uma cobrança.

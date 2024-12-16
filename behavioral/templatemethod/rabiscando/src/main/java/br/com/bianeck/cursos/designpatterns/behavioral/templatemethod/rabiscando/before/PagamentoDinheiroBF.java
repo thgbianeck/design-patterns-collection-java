@@ -1,4 +1,4 @@
-package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando;
+package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscando.before;
 
 /**
  * A classe PagamentoDinheiro representa uma transação de pagamento em dinheiro.
@@ -14,9 +14,9 @@ package br.com.bianeck.cursos.designpatterns.behavioral.templatemethod.rabiscand
  * @version 1.0
  * @since 2023-XX-XX
  */
-public class PagamentoDinheiro {
+public class PagamentoDinheiroBF {
     private float valor;
-    private Gateway gateway;
+    private GatewayBF gateway;
 
     /**
      * Construtor para criar uma nova instância de PagamentoDinheiro.
@@ -24,7 +24,7 @@ public class PagamentoDinheiro {
      * @param valor   O valor do pagamento a ser processado.
      * @param gateway O objeto Gateway a ser utilizado para simular o processamento da transação.
      */
-    public PagamentoDinheiro(float valor, Gateway gateway) {
+    public PagamentoDinheiroBF(float valor, GatewayBF gateway) {
         this.valor = valor;
         this.gateway = gateway;
     }
