@@ -16,6 +16,7 @@
     <modules>
         <module>rabiscando</module>
         <module>refactoringguru</module>
+        <module>refactoringguru</module>
     </modules>
     
 </project>

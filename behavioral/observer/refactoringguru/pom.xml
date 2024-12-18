@@ -12,5 +12,7 @@
     <groupId>br.com.bianeck.cursos.designpatterns.behavioral.observer</groupId>
     <artifactId>refactoringguru</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
 
 </project>
