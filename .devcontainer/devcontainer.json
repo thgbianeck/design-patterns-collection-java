@@ -30,7 +30,9 @@
             "shd101wyy.markdown-preview-enhanced",
             "yzhang.markdown-all-in-one",
             "jebbs.plantuml",
-            "CodeDiagram.codediagram"
+            "CodeDiagram.codediagram",
+            "GitHub.copilot",
+            "GitHub.copilot-chat"
         ],
         "settings": {
 	        "maven.executable.path": "/usr/bin/mvn",
